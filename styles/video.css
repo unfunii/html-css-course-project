@@ -1,0 +1,152 @@
+
+.thumbnail {
+    width: 100%;
+    /*object-fit:cover; gonna fit img into
+    width and heigh without stretching img
+    object-fit: contain; = putting img to a 
+    width and height values without changing anything*/
+    /* object-position: center; changes img position*/
+    
+    /*display:block = block elements take the whole space
+    inline-block takes only needed space*/
+}
+
+
+.video-title {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.video-title-link {
+    color: black;
+    text-decoration: none;
+}
+.video-author,
+.video-stats {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.channel-picture {
+    vertical-align: top;   
+}
+
+.profile-picture {
+    width: 36px;
+    border-radius: 50px;
+    
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+    
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+    /* text-decoration: underline;
+    inheritance */
+}
+
+@media (max-width : 1000px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+
+@media (min-width: 1200px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+
+.video-time {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+   
+}
+
+.profile-picture-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-picture {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.channel-tooltip {
+    background-color: white;
+    width: 200px;
+    padding: 12px 12px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    position: absolute;
+    top: 50px;
+    z-index: 300;
+
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    transition: opacity 0.15s;
+    
+}
+
+
+.profile-picture-container:hover .channel-tooltip {
+  opacity: 1;
+}
+
+.channel-tooltip-name {
+  font-family: Roboto, Arial;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.channel-tooltip-stats {
+  font-family: Roboto, Arial;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
